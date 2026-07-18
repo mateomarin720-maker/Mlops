@@ -131,10 +131,12 @@ git push origin feature/model-training
 
 ## 11. Roles del equipo
 
-Ver [`TEAM.md`](./TEAM.md) para el detalle de integrantes, roles y responsabilidades.
+Ver [`Integrantes_Equipo.md`](./Integrantes_Equipo.md) para el detalle de integrantes, roles y responsabilidades.
 
 ## 12. Próximos pasos / posibles extensiones
 
 - Incorporar validación cruzada y búsqueda de hiperparámetros (`GridSearchCV`, `Optuna`).
 - Agregar un notebook de EDA en `notebooks/`.
 - Servir el modelo ganador con una API simple (FastAPI) como extensión del flujo MLOps.
+
+
