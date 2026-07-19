@@ -1,0 +1,33 @@
+# Poetry / Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Datos versionados con DVC (el .csv real no va a Git, solo el .dvc)
+/data/raw/*.csv
+/data/processed/*.csv
+!/data/raw/.gitkeep
+!/data/processed/.gitkeep
+
+# Modelos (versionados con DVC, no con Git)
+/models/*.pkl
+!/models/.gitkeep
+
+# MLflow
+mlruns/
+mlflow.db
+outputs/*.png
+
+# DVC
+/.dvc/cache
+/.dvc/tmp
+
+# Sistema operativo / editores
+.DS_Store
+.idea/
+.vscode/
+*.log

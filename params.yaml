@@ -1,0 +1,22 @@
+prepare:
+  input_path: data/raw/open_rate_dataset.csv
+  output_dir: data/processed
+  test_size: 0.2
+  seed: 42
+
+train:
+  processed_dir: data/processed
+  models_dir: models
+  outputs_dir: outputs
+  seed: 42
+  logistic_regression:
+    max_iter: 500
+    C: 1.0
+  random_forest:
+    n_estimators: 200
+    max_depth: 12
+    min_samples_leaf: 5
+
+mlflow:
+  experiment_name: open_rate_prediction
+  tracking_uri: mlruns

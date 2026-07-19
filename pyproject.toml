@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "actividad1-mlops-openrate"
+version = "0.1.0"
+description = "Mini flujo MLOps para prediccion de Open Rate de notificaciones push"
+authors = ["Equipo XX <equipo@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.0"
+numpy = "^2.0.0"
+scikit-learn = "^1.5.0"
+mlflow = "^2.16.0"
+dvc = "^3.51.0"
+pyyaml = "^6.0.1"
+joblib = "^1.4.0"
+matplotlib = "^3.8.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+black = "^24.4.0"
+ruff = "^0.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
