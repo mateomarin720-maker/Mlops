@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/Mateo/OneDrive/Documentos/GitHub/Mlops/mlruns/585244540008148007/42e9782f700b40dfb3d03f7c7525fa1a/artifacts
+end_time: 1784429325281
+entry_point_name: ''
+experiment_id: '585244540008148007'
+lifecycle_stage: active
+run_id: 42e9782f700b40dfb3d03f7c7525fa1a
+run_name: logistic_regression
+run_uuid: 42e9782f700b40dfb3d03f7c7525fa1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1784429316452
+status: 3
+tags: []
+user_id: Mateo

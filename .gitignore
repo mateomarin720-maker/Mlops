@@ -18,7 +18,7 @@ venv/
 !/models/.gitkeep
 
 # MLflow
-mlruns/
+# mlruns/
 mlflow.db
 outputs/*.png
 

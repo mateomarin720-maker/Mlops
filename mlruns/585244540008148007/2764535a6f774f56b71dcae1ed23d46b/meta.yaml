@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/Mateo/OneDrive/Documentos/GitHub/Mlops/mlruns/585244540008148007/2764535a6f774f56b71dcae1ed23d46b/artifacts
+end_time: 1784429331238
+entry_point_name: ''
+experiment_id: '585244540008148007'
+lifecycle_stage: active
+run_id: 2764535a6f774f56b71dcae1ed23d46b
+run_name: random_forest
+run_uuid: 2764535a6f774f56b71dcae1ed23d46b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1784429325288
+status: 3
+tags: []
+user_id: Mateo
