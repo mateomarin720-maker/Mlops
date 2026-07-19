@@ -1,0 +1,71 @@
+schema: '2.0'
+stages:
+  generate_data:
+    cmd: python src/generate_data.py --n_rows 50000 --seed 42
+    deps:
+    - path: src/generate_data.py
+      hash: md5
+      md5: ac2f12e64c3393cade4c00a85fad5655
+      size: 3858
+    outs:
+    - path: data/raw/open_rate_dataset.csv
+      hash: md5
+      md5: b5d27e0de83a1e0c0e3a96f46bafc2d3
+      size: 2986626
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: data/raw/open_rate_dataset.csv
+      hash: md5
+      md5: b5d27e0de83a1e0c0e3a96f46bafc2d3
+      size: 2986626
+    - path: src/prepare.py
+      hash: md5
+      md5: e3bbfa8353010dd673015872f17d7128
+      size: 1898
+    params:
+      params.yaml:
+        prepare.seed: 42
+        prepare.test_size: 0.2
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 8c48c30664aa28a6a337cb343d306329
+      size: 951616
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 67296ab2ac3b778c12acc6c3f7071e68
+      size: 3806358
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 8c48c30664aa28a6a337cb343d306329
+      size: 951616
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 67296ab2ac3b778c12acc6c3f7071e68
+      size: 3806358
+    - path: src/train.py
+      hash: md5
+      md5: 694412fd0b801985dafbbaf6b8c2b673
+      size: 4270
+    params:
+      params.yaml:
+        train.logistic_regression:
+          max_iter: 500
+          C: 1.0
+        train.random_forest:
+          n_estimators: 200
+          max_depth: 12
+          min_samples_leaf: 5
+    outs:
+    - path: models/best_model.pkl
+      hash: md5
+      md5: 8badd5ac62bd6abd7097c985a8a4341f
+      size: 1599
+    - path: outputs/metrics.json
+      hash: md5
+      md5: 838b550558f35b8dfcc650d5b90778ce
+      size: 539
