@@ -5,8 +5,8 @@ stages:
     deps:
     - path: src/generate_data.py
       hash: md5
-      md5: ac2f12e64c3393cade4c00a85fad5655
-      size: 3858
+      md5: 537ab406012a5f0fef6a0e545e7912d9
+      size: 3968
     outs:
     - path: data/raw/open_rate_dataset.csv
       hash: md5
@@ -21,8 +21,8 @@ stages:
       size: 2986626
     - path: src/prepare.py
       hash: md5
-      md5: e3bbfa8353010dd673015872f17d7128
-      size: 1898
+      md5: 243c705afa0911110838a6cbfbaad3cb
+      size: 1967
     params:
       params.yaml:
         prepare.seed: 42
@@ -49,10 +49,14 @@ stages:
       size: 3806358
     - path: src/train.py
       hash: md5
-      md5: 694412fd0b801985dafbbaf6b8c2b673
-      size: 4270
+      md5: 023a1fd72fdb2809243935d575f6e228
+      size: 4403
     params:
       params.yaml:
+        train.gradient_boosting:
+          n_estimators: 150
+          learning_rate: 0.1
+          max_depth: 3
         train.logistic_regression:
           max_iter: 500
           C: 1.0
@@ -63,9 +67,9 @@ stages:
     outs:
     - path: models/best_model.pkl
       hash: md5
-      md5: 8badd5ac62bd6abd7097c985a8a4341f
+      md5: b1505dac484b5495f144a6a05799d704
       size: 1599
     - path: outputs/metrics.json
       hash: md5
-      md5: 838b550558f35b8dfcc650d5b90778ce
-      size: 539
+      md5: 33ba77896816cd37547b79a4fcf789f0
+      size: 544
