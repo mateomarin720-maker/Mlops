@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Sebas/OneDrive/Documentos/GitHub/Mlops/Mlops/mlruns/427628790093973185/fce3fe6458ff4ff9b74c4b7c4ef8878b/artifacts
+end_time: 1784433631422
+entry_point_name: ''
+experiment_id: '427628790093973185'
+lifecycle_stage: active
+run_id: fce3fe6458ff4ff9b74c4b7c4ef8878b
+run_name: random_forest
+run_uuid: fce3fe6458ff4ff9b74c4b7c4ef8878b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1784433624405
+status: 3
+tags: []
+user_id: Sebas
